@@ -60,39 +60,25 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section className="section">
-      <h2 className="section-title">Projects</h2>
-      <div style={{ display: 'flex', flexDirection: 'column' }}>
+    <article>
+      <h2 className="section-title">Portfolio</h2>
+      
+      <div className="project-grid">
         {projects.map((project, index) => (
           <a
             key={index}
             href={project.link}
             target="_blank"
             rel="noreferrer"
-            className="project-row"
+            className="project-card"
           >
-            <div style={{ width: '30%', fontWeight: '600', flexShrink: 0 }}>
-              {project.name}
-            </div>
-            <div style={{ width: '35%', color: '#444' }}>
-              {project.description}
-            </div>
-            <div style={{ 
-              width: '35%',
-              fontFamily: 'var(--font-header)', 
-              fontSize: '0.75rem', 
-              color: '#666',
-              textAlign: 'right'
-            }}>
-              {project.tags.join(', ')}
-            </div>
-            <div className="project-arrow-container">
-              <span className="project-arrow"></span>
-            </div>
+            <h3 className="project-title">{project.name}</h3>
+            <p className="project-category">{project.tags.join(', ')}</p>
+            <p className="project-desc">{project.description}</p>
           </a>
         ))}
       </div>
-    </section>
+    </article>
   );
 };
 

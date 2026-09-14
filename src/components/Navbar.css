@@ -1,0 +1,45 @@
+.navbar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--card-bg-light);
+  border-bottom-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+  padding: 0 2rem;
+  border: 1px solid var(--border-color);
+  border-top: none;
+  border-right: none;
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    position: relative;
+    width: 100%;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+  }
+}
+
+.navbar-list {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.navbar-link {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  font-family: inherit;
+  font-weight: 500;
+  padding: 1.25rem 0;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.navbar-link:hover,
+.navbar-link.active {
+  color: var(--accent-color);
+}

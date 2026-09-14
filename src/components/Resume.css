@@ -1,0 +1,56 @@
+.timeline-list {
+  position: relative;
+  list-style: none;
+  padding-left: 30px;
+}
+
+.timeline-list::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 100%;
+  background-color: var(--border-color);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: -35px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  box-shadow: 0 0 0 4px var(--card-bg);
+}
+
+.timeline-item-title {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.timeline-item-date {
+  color: var(--accent-color);
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.timeline-item-institution {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.timeline-text {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
